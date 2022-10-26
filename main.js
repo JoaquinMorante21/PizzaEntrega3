@@ -94,7 +94,7 @@ const renderCard = (pizza) => {
   `;
 };
 
-/* Función para mostrar un error en caso de que no hayamos colocado nada en el input y activemos el evento submit */
+/* Función para mostrar un error si es que no ponemos nada*/
 const showEmptyError = () => {
   resultContainer.innerHTML = `
     <div class="pizza-container">
@@ -103,7 +103,7 @@ const showEmptyError = () => {
     </div>`;
 };
 
-/* Función para renderizar el resultado de la busqueda. Lo que se renderice dependerá de si se encontro una pizza con el id dado o no. */
+/* Función para renderizar el resultado de la busqueda.*/
 const renderResult = (pizza) => {
   if (!pizza) {
     resultContainer.innerHTML = `
@@ -117,11 +117,7 @@ const renderResult = (pizza) => {
   }
 };
 
-/* Función que se ejecutará al darse el evento "submit". 
-1- Guardamos el valor del input en una variable.
-2- Si el valor es undefined (debido a lo que devuelve el método find), mostramos un error.
-3- Si el valor no es undefined, guardamos la pizza encontrada.
-*/
+/* Función para submit*/
 
 const submitSearch = (e) => {
   e.preventDefault();
